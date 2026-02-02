@@ -1,0 +1,18 @@
+• What is Web Technology?
+ - Web technology refers to the tools and technologies used to create websites and web applications. 
+ - It includes things like HTML, CSS, JavaScript, and servers that help display web pages on the internet.
+
+• Real-time examples of Web Technology
+ - Examples includes websites like Google, YouTube, Amazon, flipkart. 
+ - Online forms, email services, and video calls also use web technologies.
+
+• What is JavaScript?
+ - JavaScript is a programming language used to make web pages interactive. 
+ - It helps in adding features like buttons, pop-ups, form validation, and dynamic content.
+
+• Which file extension is used for JavaScript?
+ - The file extension used for JavaScript is .js 
+
+• Why do we use Node.js?
+ - Node.js is used to run JavaScript outside the browser. 
+ - It helps in building fast and scalable server-side applications like APIs and backend services.
