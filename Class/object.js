@@ -44,3 +44,28 @@ user.greeting2 = function(){
     
 }
 console.log(user.greeting2());
+
+//2]object singleton
+const user = new Object;
+console.log(user);
+
+
+//non-singleton object
+const user2 = {};
+user2.id = 123;
+user2.name = "Swapnil";
+user2.city = "Miraj";
+user2.isLogin = true
+console.log(user2);
+
+
+//nested object 
+const regularUser = {
+    email:"xyz@gmail.com",
+    fullname:{
+        fname:"Swapnil",
+        lname:"Bhosale"
+    }
+}
+console.log(regularUser);
+console.log(regularUser.fullname.fname);
