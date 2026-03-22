@@ -1,0 +1,163 @@
+<!-- 
+ what is an events :- 
+ - event is an action that happens in browser.
+ - Ex. Clicking a button, moving mouse, pressing key, hovering , submitting form, loading a page etc.
+ - js can detect these events and responds to them.
+
+Types of Events
+ 1. Mouse Event
+  - Click
+  - dbl Click
+  - mouse hover
+  - mouse out
+  
+ 2. Keyboar Event
+  - key down 
+  - key up
+
+ 3. Browser event
+  - load
+  - resize
+  - scroll 
+
+
+
+     <li>
+            <img id="japan"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                onclick="alert('Japan')"
+                alt="Mount Fuji">
+    </li>
+
+    - this is a not good way html should contain structure and js contains logic mixing both this is a bad practice 
+    - hard to maintain (good for biginners not used in companies)
+
+addEventListener :-
+    - addEventListener is a js method used to atatch an event handler to an html elements so that specific function run when event occures.
+
+
+Event Propogation :-
+    - Event Bubelling
+      - Inner element to the parent and parent to the docuemnt, If photoshop image click output was (photoshop, clicking inside the ul) becaulse event bubble
+      - if you change it to true ten order becomes parent to child
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Demo</title>
+
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: lightblue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Amazing Images (Click to Remove)</h2>
+
+    <ul id="images">
+        <li>
+            <img id="photoshop"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+                alt="Photoshop Logo">
+        </li>
+
+        <li>
+            <img id="japan"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                onclick="alert('Japan')"
+                alt="Mount Fuji">
+        </li>
+
+        <li>
+            <img id="Nature"
+                src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"
+                alt="Nature Image">
+        </li>
+
+        <li>
+            <img id="photoman"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                alt="Photographer">
+        </li>
+
+        <li>
+            <img id="tiger"
+                src="https://images.unsplash.com/photo-1546182990-dffeafbe841d"
+                alt="Tiger">
+        </li>
+
+        <li>
+            <a href="https://google.com" id="google">Visit Google</a>
+        </li>
+    </ul>
+  </body>
+  <script>
+    document.getElementById("Nature").onclick = function() { alert('hii.. this nature');}
+    //  - select element, assign function to click event , when click function run
+    document.getElementById("tiger").addEventListener('click',function(e){      // e is event object
+        console.log(e);
+    })
+
+    // document.getElementById("photoman").addEventListener('click',function(e){      // e is event object
+    //     console.log(e);
+    // })
+
+    document.getElementById("images").addEventListener('click',function(){      // e is event object
+        console.log("Clicking inside the ul");
+    },true)
+
+    document.getElementById("photoman").addEventListener('click',function(){      // e is event object
+    console.log("Clicking photoman");
+    },true)
+
+    docuemnt.getElementById("google").addEventListener('click',function(e){
+        console.log("Google clicked!");
+        e.preventDefault();
+    },false)
+  </script>
+  </html>
+
+  <!-- home assignment (Activities)
+   - JQuery use
+   - time, tiemstamp, defaultprevented, target, sourseElement, currentTage, clientx, clienty, screenx, screeny 
+     alt key , control key, shift key
+   
+   - when we click on the image 
+
+   
+-->
