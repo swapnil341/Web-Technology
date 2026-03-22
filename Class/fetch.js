@@ -7,7 +7,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 .catch((err) => console.log("Error:", err));
 
 
- 
+
 // 1] WHERE WE USE PROMISES (Company Level)
  
 // - API calls (fetch, axios)
