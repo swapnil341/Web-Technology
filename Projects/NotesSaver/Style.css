@@ -1,0 +1,109 @@
+body {
+  font-family: Arial;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 400px;
+  margin-top: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Calendar */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-top: 10px;
+}
+
+/* Day box */
+.day {
+  background: white;
+  border-radius: 8px;
+  min-height: 70px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day:hover {
+  background: #e3f2fd;
+  transform: scale(1.05);
+}
+
+.day strong {
+  display: block;
+}
+
+/* Sunday styling */
+.sunday {
+  background: #ffecec;
+  border: 1px solid #ff4d4d;
+}
+
+.sunday strong {
+  color: red;
+}
+
+/* Selected day */
+.selected {
+  background: #bbdefb;
+}
+
+/* Notes inside day */
+.note {
+  font-size: 11px;
+  color: #1976d2;
+  margin-top: 5px;
+}
+
+/* Note section */
+#noteSection {
+  margin-top: 15px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 5px;
+}
+
+/* Buttons */
+button {
+  margin-top: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#clearNote {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #323232;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}

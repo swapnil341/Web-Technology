@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <button id="prevBtn">⬅</button>
+      <h2 id="monthYear"></h2>
+      <button id="nextBtn">➡</button>
+    </div>
+
+    <div id="calendar"></div>
+
+    <!-- Notes Section -->
+    <div id="noteSection">
+      <h3 id="selectedDateText">Select a date</h3>
+      <textarea id="noteInput" placeholder="Write your note..."></textarea>
+      
+      <button id="saveNote">Save Note</button>
+      <button id="clearNote">Clear Note</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
