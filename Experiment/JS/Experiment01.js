@@ -1,7 +1,7 @@
 // const variable
 const PI = 3.14;
 // var 
-var userName = "Swapnil";
+var username = "Swapnil";
 // let
 let branch = "AIML";
 
