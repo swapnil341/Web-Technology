@@ -1,0 +1,50 @@
+Package.json :- it is a configuarion file. info about your project 
+packagelog.json :- it has detailed info about project
+angular.json :- project configuration file.
+style.css :- global css styles
+.gitignore :- file/folder which exclude from version control
+tsconfig.json :- type scrip config 
+.editconfig :- editor setting
+index.html :- main HTML file loads angular
+main.ts :- entry point of the project
+app.config.ts :- app config file
+
+
+There are two types of data types primitive and non-primitive
+
+data type declaration 
+name:string = "Swapnil";
+let <varName> : <datatype>;
+let <varName> : <datatype> = <value>;
+
+String :
+let name:string = "string";
+
+number :
+let no:number = 34;
+
+boolean :
+let isFalse:boolean = false;
+
+null :
+let data : any = null;
+
+Components
+ - Components is a UI block of structure
+ - when we create Components Component creates four file HTML,CSS,TS and spec.ts
+ - ng generate component component_name 
+ - ng g c component_name
+
+
+ Data Binding (IMPPPPP)
+ two types of data binding 
+  - One way 
+  - Two way
+
+Types of data binding 
+ - Interpolation {{valeu}}
+ - Property [property] = 'value'
+ - Event (event) = "handler()"
+ - Two-way [(ngModel)] = "value"
+
+ data binding means connect UI to code 

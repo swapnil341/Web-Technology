@@ -2,6 +2,8 @@
 // Diffrence between Arrow function and simple function
 // =====================================
 
+console.log("Arrow Function")
+
 // Simple function example
 function greetSimpleFunction(userName){
     console.log(`Hello ${userName}`);
