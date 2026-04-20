@@ -39,12 +39,18 @@ Components
  Data Binding (IMPPPPP)
  two types of data binding 
   - One way 
+    - Interpolation {{valeu}}
+    - Property [property] = 'value'
+    - Event (event) = "handler()"
   - Two way
+     - Two-way [(ngModel)] = "value"
 
 Types of data binding 
- - Interpolation {{valeu}}
- - Property [property] = 'value'
- - Event (event) = "handler()"
- - Two-way [(ngModel)] = "value"
+
 
  data binding means connect UI to code 
+
+
+ Acdtivity
+ 1. hwo we can use if else, switch, for blocks in Angular 
+ 2.

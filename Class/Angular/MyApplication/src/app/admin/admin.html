@@ -1,2 +1,15 @@
-<p>admin works!</p>
-<p>{{fname}}</p>
+<h2>Admin Deatils</h2>
+
+<p>Name: {{fname}} {{lname}}</p>
+
+<br><br>
+
+
+<h1>Ng model</h1>
+
+<input [(ngModel)] = "fname" placeholder="Name">
+
+<br><br>
+
+<h1>Event Binder</h1>
+<button (click)=changeName()>Change Name</button>
