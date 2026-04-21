@@ -1,0 +1,64 @@
+React 
+ - It is a JS library developed by Meta to build a fast and interractive UI. 
+ - We can create Single Page Applications using React.
+
+Why do we use React
+ - full page reload
+ - complex DOM manipulations
+ - hard to manage large apps 
+
+ + updates only require parts with React 
+ + uses reusable components
+
+SPA (Single Page Application)
+ - Ex Instagra, Facebook 
+ - when you click page does not reload only content loads.
+
+Virtual DOM
+ - React creates a copy of real DOM its called virtual DOM.
+ - When data changes Ract updates virtual DOM.
+ - Updates the only changed parts in real DOM.
+ - Adds high performance.
+
+Tools required
+ - npm 
+ - node.js 
+
+Command to create React project
+ >npm create vite@latest <project name>
+
+vite 
+ - It is a fast built tool 
+
+IMPORTANT FILES
+index.jsx - Entry html FILES
+main.jsx - Entry point of react apps
+app.jsx - root component
+components/ - reusable UI parts
+
+What is JSX
+ - JavaScript + HTML 
+ - It alows us to write HTML code in JS code.
+ - Syntax :- const element = <h1> Welcome </h1>;
+
+ Rules 
+  - Mulst return single parent.
+  - Use {} for JS.
+
+components
+ - component is a hart of React.
+ - to create a complex
+ - Two types of commponents
+   1. Functional components 
+     - A function can return only once
+     - After once the second line never exicutes.
+     - so we use <>...</> to group returning code.
+   2.  
+
+Props (Data passing)
+ - Data passing from parent to child.
+
+
+ Activity
+  1. Diff React and Angular.
+  2. <> </> why we use them.
