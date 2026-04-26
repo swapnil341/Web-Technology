@@ -1,0 +1,240 @@
+/* --- GLOBAL TYPOGRAPHY & RESET --- */
+:root {
+  --primary-color: #2563eb; /* Modern Blue */
+  --primary-hover: #1d4ed8;
+  --secondary-color: #ea580c; /* Modern Orange */
+  --secondary-hover: #c2410c;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --success-bg: #ecfdf5;
+  --success-text: #047857;
+  --success-border: #10b981;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* --- NAVIGATION --- */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.nav-title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link.primary { color: var(--primary-color); }
+.nav-link.secondary { color: var(--secondary-color); }
+
+/* --- CARD CONTAINERS --- */
+.card {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+/* --- FORMS & INPUTS --- */
+.form-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* --- BUTTONS --- */
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-primary { background-color: var(--primary-color); }
+.btn-primary:hover:not(:disabled) { background-color: var(--primary-hover); }
+
+.btn-secondary { background-color: var(--secondary-color); }
+.btn-secondary:hover:not(:disabled) { background-color: var(--secondary-hover); }
+
+/* --- ALERTS & MESSAGES --- */
+.error-text {
+  color: #ef4444;
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.success-box, .stats-box {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 6px solid;
+}
+
+.success-box {
+  background-color: var(--success-bg);
+  border-left-color: var(--success-border);
+}
+
+.success-title {
+  margin: 0 0 8px 0;
+  color: var(--success-text);
+  font-weight: 600;
+}
+
+.short-link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.stats-box {
+  background-color: #fff7ed;
+  border-left-color: var(--secondary-color);
+}
+
+.stats-title {
+  margin: 0 0 16px 0;
+  color: var(--secondary-color);
+}
+
+.stats-grid p {
+  margin: 0 0 8px 0;
+  color: var(--text-muted);
+}
+
+.stats-grid .original-link {
+  color: var(--text-main);
+  word-break: break-all;
+  font-weight: 500;
+}
+
+.stats-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-left: 8px;
+}
+
+/* --- DATA TABLES --- */
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f8fafc;
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 16px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.data-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: var(--text-main);
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.table-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.table-link:hover {
+  text-decoration: underline;
+}
+
+.date-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

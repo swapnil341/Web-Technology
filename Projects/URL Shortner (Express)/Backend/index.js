@@ -1,9 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2/promise'); 
+const cors = require('cors')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(cors());
 
 app.use(express.json());
 
@@ -140,6 +143,19 @@ app.get('/api/analytics/:shortId', async (req, res) => {
     }
 });
 
+// Route to fetch all links for the dashboard
+app.get('/api/urls', async (req, res) => {
+    try {
+        // Fetch all rows, ordering by the newest first
+        const [rows] = await pool.execute(
+            'SELECT * FROM urls ORDER BY created_at DESC'
+        );
+        res.json(rows);
+    } catch (error) {
+        console.error('Database error fetching all URLs:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
