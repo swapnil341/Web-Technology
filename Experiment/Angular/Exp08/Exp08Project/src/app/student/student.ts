@@ -1,25 +1,24 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // 1. Import it
+import { FormsModule } from '@angular/forms'; 
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-student',
-  imports: [FormsModule],
+  standalone: true, 
+  imports: [FormsModule, CommonModule], 
   templateUrl: './student.html',
-  styleUrl: './student.css',
+  styleUrls: ['./student.css'],
 })
 export class Student {
-  name : string = "Swapnil";
-  PRN : string = "24UAM301";
-  dept : string = "AIML";
+  name: string = "Swapnil";
+  PRN: string = "24UAM301";
+  dept: string = "AIML";
 
-  changeName(){
-    if(this.name === "Swapnil"){
-      this.name = "Swapnil Bhosale";
-    }
-    else{
-      this.name = "Swapnil";
-    }
+  cityArr: string[] = ['Pune', 'Sangli', 'Kolhapur'];
+
+  changeName() {
+    this.name = this.name === "Swapnil" 
+      ? "Swapnil Bhosale" 
+      : "Swapnil";
   }
-
-  cityArr :string[] = ['Pune','Sangli','Kolhapur'];
 }

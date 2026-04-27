@@ -7,9 +7,16 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const showMessage = () => {
+    alert("Button Clicked!");
+  };
   return (
     <>
-    
+      <h1>student info</h1>
+      <button onClick={showMessage}>
+        Click Me
+      </button>
+      <PropsEx name="Swapnil" age="21" course="AIML" />
     </>
   )
 }
